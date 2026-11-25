@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Dプリンター使用状況照会</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+
+    <h1>3Dプリンター使用状況照会</h1>
+    <div class="attention2">
+       <p>
+         絶対の予約システムではないので、使用状況の確認程度で使ってね
+        <p>
+        日を跨いでの入力ができないため、その場合は2回に分けて入力してください！
+        </p>
+    </div>
+
+    <label for="printerSelect">予約する3Dプリンターを選択してください</label>
+    <select id="printerSelect" class="printer-select">
+        <option value="printer-1">A1mini 1号機</option>
+        <option value="printer-2">A1mini 2号機</option>
+        <option value="printer-3">A1mini 3号機</option>
+    </select>
+
+    <button id="reserveBtn">
+        印刷開始！
+    </button>
+
+</header>
+
+
+
+<div class="timeline">
+
+    <div class="timeline-header">
+
+        <div class="date-header"></div>
+
+        <div id="time-header"></div>
+
+    </div>
+
+    <div id="timeline-body"></div>
+
+</div>
+
+<!-- 予約モーダル -->
+<div id="modal" class="hidden">
+
+    <div class="modal-content">
+
+        <h2>ばんぶーを使う</h2>
+
+        <div class="form-row two-cols">
+            <div class="form-item">
+                <label for="reservationPrinter">※3Dプリンター</label>
+                <select id="reservationPrinter">
+                    <option value="printer-1">A1mini 1号機</option>
+                    <option value="printer-2">A1mini 2号機</option>
+                    <option value="printer-3">A1mini 3号機(*ノズル詰まってます！要メンテナンス)</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="reserveName">※お名前</label>
+                <input
+                    type="text"
+                    id="reserveName"
+                    placeholder="例：山田 太郎">
+            </div>
+        </div>
+
+        <div class="form-row three-cols">
+            <div class="form-item">
+                <label for="reserveDate">※日付</label>
+                <input type="date" id="reserveDate">
+            </div>
+            <div class="form-item">
+                <label for="startTime">※開始時間</label>
+                <input
+                    type="time"
+                    id="startTime"
+                    min="08:00"
+                    max="21:00"
+                    step="300">
+            </div>
+            <div class="form-item">
+                <label for="duration">※利用時間</label>
+                <input
+                    type="time"
+                    id="duration"
+                    step="300"
+                    value="01:00">
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label for="purpose">利用目的</label>
+            <input
+                type="text"
+                id="purpose"
+                placeholder="例：メディアの課題">
+        </div>
+
+        <div class="form-item">
+            <label for="message">ばんぶーに一言</label>
+            <textarea
+                id="message"
+                rows="2"
+                placeholder="例：사랑해요♡"></textarea>
+        </div>
+
+        <div class="modal-actions">
+            <button id="saveReservation">
+                使用開始
+            </button>
+            <button id="closeReservationModal">
+                閉じる
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 詳細モーダル -->
+<div id="detailModal" class="hidden">
+
+    <div class="modal-content">
+
+        <h2>詳細</h2>
+
+        <div id="detailContent"></div>
+
+        <div class="modal-actions">
+            <button id="deleteReservation">
+                キャンセル
+            </button>
+            <button id="closeDetail">
+                閉じる
+            </button>
+        </div>
+
+    </div>
+    
+
+</div>
+
+
+
+<script type="module" src="timetable.js"></script>
+
+</body>
+<footer>created by りさ</footer>
+
+</html>

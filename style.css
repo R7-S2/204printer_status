@@ -1,0 +1,578 @@
+body{
+margin:0;
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:#f5f5f5;
+
+font-family:sans-serif;
+
+}
+
+/* 登録画面 */
+
+.register-container{
+
+
+width:320px;
+
+display:flex;
+flex-direction:column;
+gap:16px;
+
+padding:32px;
+
+background:white;
+
+border-radius:16px;
+
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+
+
+}
+
+.form-group{
+
+
+display:flex;
+flex-direction:column;
+gap:6px;
+
+
+}
+
+label{
+font-weight:600;
+}
+
+input,
+select,
+textarea{
+
+width:100%;
+
+box-sizing:border-box;
+
+padding:10px;
+
+border:1px solid #ccc;
+
+border-radius:8px;
+
+font-size:16px;
+
+}
+
+textarea{
+resize:vertical;
+}
+
+#color{
+height:50px;
+padding:4px;
+}
+
+button{
+
+
+margin-top:8px;
+
+padding:12px;
+
+border:none;
+
+border-radius:8px;
+
+background:#4BA3FF;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+
+}
+
+#reserveBtn{
+    font-size: 30px;
+}
+
+.printer-select{
+    max-width:320px;
+}
+
+.danger-button{
+    background:#d93025;
+}
+
+/* タイムテーブル */
+
+body{
+
+
+padding:30px;
+
+flex-direction:column;
+
+align-items:center;
+
+
+}
+
+header{
+
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:20px;
+
+}
+
+.timeline{
+
+background:white;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+
+width:90vw;
+
+max-width:1400px;
+
+overflow:hidden;
+}
+
+/* 時間ヘッダー */
+
+.timeline-header{
+
+
+display:grid;
+
+grid-template-columns:120px 1fr;
+
+border-bottom:1px solid #ddd;
+
+}
+
+.date-header{
+border-right:1px solid #ddd;
+}
+
+#time-header{
+
+display:grid;
+
+grid-template-columns:repeat(14,1fr);
+
+}
+
+.hour{
+
+text-align:center;
+
+padding:12px 0;
+
+border-left:1px solid #eee;
+
+font-size:14px;
+
+}
+
+/* 日付行 */
+
+.day-row{
+
+
+display:grid;
+
+grid-template-columns:120px 1fr;
+
+min-height:60px;
+
+border-bottom:1px solid #eee;
+
+}
+
+.day-label{
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-right:1px solid #ddd;
+
+font-weight:bold;
+
+}
+
+.day-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(14,1fr);
+
+position:relative;
+
+}
+
+.hour-cell{
+border-left:1px solid #eee;
+}
+
+/* モーダル */
+
+.hidden{
+display:none !important;
+}
+
+#modal,
+#detailModal{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.4);
+
+    z-index:1000;
+    padding:16px;
+    box-sizing:border-box;
+    overflow-y:auto;
+}
+
+#modal.hidden,
+#detailModal.hidden{
+    display:none !important;
+}
+
+.modal-content{
+    background:white;
+
+    width:100%;
+    max-width:560px;
+    max-height:90vh;
+    overflow-y:auto;
+
+    padding:24px;
+
+    border-radius:16px;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.2);
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    box-sizing:border-box;
+}
+
+.modal-content h2{
+    margin:0 0 4px 0;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+}
+
+@media (min-width: 580px){
+    .form-row.two-cols{
+        grid-template-columns:1fr 1fr;
+    }
+    .form-row.three-cols{
+        grid-template-columns:1.2fr 1fr 1fr;
+    }
+}
+
+.form-item{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.form-item label{
+    font-size:14px;
+    font-weight:600;
+}
+
+.modal-actions{
+    display:flex;
+    gap:12px;
+    margin-top:8px;
+}
+
+.modal-actions button{
+    flex:1;
+    margin-top:0;
+}
+
+#closeReservationModal,
+#closeDetail{
+    background:#e2e8f0;
+    color:#334155;
+}
+
+#deleteReservation{
+    background:#ef4444;
+    color:white;
+}
+
+/* 予約バー */
+
+.reservation-bar{
+
+position:absolute;
+
+top:10px;
+
+height:40px;
+
+border-radius:8px;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+padding:0 10px;
+
+box-sizing:border-box;
+
+overflow:hidden;
+
+white-space:nowrap;
+
+font-size:14px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+#userMenu {
+
+position: fixed;
+
+top: 16px;
+
+right: 16px;
+
+}
+
+#userBtn {
+
+width: 70px;
+
+height: 70px;
+
+border-radius: 50%;
+
+border: none;
+
+background: #fff;
+
+box-shadow: 0 2px 8px rgba(0,0,0,.15);
+
+font-size: 24px;
+
+cursor: pointer;
+
+}
+
+.attention{
+    color: gray;
+    font-size: 10px;
+}
+
+.attention2{
+    color: gray;
+    text-align: center;
+}
+
+input[type="color"] {
+    display: block;
+    width: 100%;       
+    height: 40px;     
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   日付切り替えナビゲーション（PCでは隠す）
+   ========================================================================== */
+.date-navigation {
+    display: none;
+}
+
+/* ==========================================================================
+   📱 スマートフォン向け（2日間・縦スクロール表示）
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* --- 1. 日付切り替えナビゲーション --- */
+    .date-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 10px 12px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: none;
+    }
+
+    #mobileDateLabel {
+        font-size: 14px; /* 2日分入るように少し小さめ */
+        font-weight: bold;
+        color: #333;
+        white-space: nowrap;
+    }
+
+    .date-navigation button {
+        background: #f0f0f0;
+        color: #333;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .date-navigation button:active {
+        background: #e0e0e0;
+        transform: scale(0.95);
+    }
+
+    /* --- 2. タイムライン全体 --- */
+    .date-header {
+        display: none !important; /* PC用の左上空白は隠す */
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: row; 
+        width: 100%;
+        height: 65vh; 
+        overflow-y: auto !important;
+        overflow-x: hidden;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        background: #fff;
+    }
+
+    /* --- 3. 左側の時間軸 --- */
+    .timeline-header {
+        display: block !important;
+        width: 50px; /* 枠を広げるため少しスリムに */
+        min-width: 50px;
+        background: #fafafa;
+        border-right: 1px solid #ddd;
+        z-index: 10;
+        height: 880px; /* グリッド840px + 上部ラベル40px */
+    }
+
+    #time-header {
+        display: block !important;
+        width: 100%;
+        margin-top: 40px; /* ★右側の日付ラベルの分だけ下にズラす */
+    }
+
+    #time-header .hour {
+        width: 100% !important;
+        height: 60px; 
+        line-height: 60px; 
+        text-align: right;
+        padding: 0 6px 0 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eee;
+        font-size: 11px;
+        color: #666;
+    }
+
+    /* --- 4. 右側のグリッド（横に2日分並べる） --- */
+    #timeline-body {
+        display: flex;       /* ★横並びに */
+        flex-direction: row; /* ★横並びに */
+        flex-grow: 1;
+        width: calc(100% - 50px);
+    }
+
+    /* JSで付与されたクラスで幅を50%ずつ分割 */
+    .day-row.mobile-visible {
+        width: 50% !important; 
+        border-right: 1px solid #e0e0e0;
+        box-sizing: border-box;
+    }
+    .day-row.mobile-visible:last-child {
+        border-right: none;
+    }
+
+    /* ★各列の上に日付を表示する */
+    .day-label {
+        display: block !important;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        background: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* はみ出たら「...」にする */
+    }
+
+    .day-grid {
+        display: block !important;
+        width: 100% !important;
+        height: 840px; 
+        position: relative;
+    }
+
+    .hour-cell {
+        width: 100%;
+        height: 60px; 
+        border-bottom: 1px solid #f0f0f0; 
+        box-sizing: border-box;
+    }
+
+    /* --- 5. 予約バー --- */
+    .reservation-bar {
+        top: calc(var(--js-left-percent) * 1%) !important;
+        height: calc(var(--js-width-percent) * 1%) !important;
+        left: 2px !important;
+        width: calc(100% - 4px) !important;
+        padding: 4px !important;
+        font-size: 11px;
+        white-space: normal !important; 
+        align-items: flex-start !important;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+}
